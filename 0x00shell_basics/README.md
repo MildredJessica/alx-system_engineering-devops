@@ -1,1 +1,2 @@
-This is a reademe file for the shell basics
+This is a readme file for the shell basics
+
