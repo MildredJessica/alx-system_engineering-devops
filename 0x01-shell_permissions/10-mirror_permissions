@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo chgrp hello olleh
+chown --reference= olleh hello 
