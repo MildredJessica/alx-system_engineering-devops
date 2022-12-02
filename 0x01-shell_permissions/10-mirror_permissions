@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo chown -m --reference=hello hi
+sudo chomd --reference=olleh hello
