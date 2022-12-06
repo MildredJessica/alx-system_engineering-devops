@@ -20,3 +20,8 @@ This is a readme file for shell redirections
 **Display all lines of the file /etc/ssh/sshd_config starting with a letter.**
 **Replace all characters A and c from input to Z and e respectively**
 **Create a script that removes all letters c and C from input**
+**Write a script that reverse its input.**
+**Script that displays all users and their home directories, sorted by users**
+**Write a command that finds all empty files and directories in the current directory and all sub-directories.**
+**Script that lists all the files with a .gif extension in the current directory and all its sub-directories**
+**
