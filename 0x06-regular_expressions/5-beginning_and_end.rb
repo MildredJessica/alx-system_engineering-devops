@@ -1,2 +1,3 @@
 #!/usr/bin/env ruby
-puts ARGV[0].scan(/hbt+n/).join
+# Matching a string that starts with h ends with n and can have any single character in between
+puts ARGV[0].scan(/\Ah.?n\z/).join
