@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
-# Creates an RSA key pair
+# Creates an RSA key pair with filename as school
+# Number of bits should be 4096
+# Paraphrase with the name betty
 ssh-keygen -f school -b 4096 -N "betty" 
