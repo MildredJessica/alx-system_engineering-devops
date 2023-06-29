@@ -14,7 +14,7 @@ ip=$2
 ssh_key_path=$4
 
 # Disabling strict host key check
-scp -o "StrictHostKeyChecking=no" -i "$ssh_key_path" "$path_to_file" "$username@ip:/"  
+scp -o "StrictHostKeyChecking=no" -i "$ssh_key_path" "$path_to_file" "$username@$ip:/"  
 
 # Checking to see if the file was sent
 
