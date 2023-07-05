@@ -20,7 +20,7 @@ scp -o "StrictHostKeyChecking=no" -i "$ssh_key_path" "$path_to_file" "$username@
 
 if [ $? -eq 0 ]
 then
-	echo "Successfully Sent"
+	echo "FILE wasSuccessfully Sent"
 else
-	echo "Unsuccessful"
+	echo "FILE was Unsuccessful"
 fi
