@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# displays the list of subdomains
+
+SubDomain ()
+{
+	Records=$(dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | grep -v 'ANSWER SECTION:')
+	Type=$(echo "$Records" | awk '{print $4}')
+	IP=$(echo "$Records" | awk '{print $5}')
+	echo "The subdomain $2 is a $Type record and points to $IP"
+}
+
+if [ $# -eq 2 ]
+then
+	SubDomain "$1" "$2"
+else
+	SubDomain "$1" "www"
+	SubDomain "$1" "lb-01"
+	SubDomain "$1" "web-01"
+	SubDomain "$1" "web-02"
+fi
