@@ -1,0 +1,2 @@
+sed: 1: "/etc/nginx/sites-enable ...": extra characters at the end of n command
+./0-nginx_likes_port_80: line 5: service: command not found
