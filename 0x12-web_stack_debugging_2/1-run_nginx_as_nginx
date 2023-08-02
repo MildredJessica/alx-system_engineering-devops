@@ -1,12 +1,7 @@
 #!/usr/bin/env bash
-# Runs nginx as nginx.
-
-sudo service nginx stop
-sed -i -E 's/#user.+\;/user nginx;/' /etc/nginx/nginx.conf
-sed -i 's/80/8080/' /etc/nginx/sites-enabled/default
-chown nginx:nginx /etc/nginx/ -R
-chmod +rw /etc/nginx/nginx.conf
-for pid in $(pidof apache2); do
-    kill "$pid"
-done
-su -c 'service nginx start' nginx
+# Runs nginx as nginx user
+pkill apache2
+sed -i 's/80/8080/g' /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default
+chown -R nginx /etc/nginx /var/log/nginx /usr/share/nginx
+chmod 777 /etc/nginx/nginx.conf
+su nginx -c nginx
